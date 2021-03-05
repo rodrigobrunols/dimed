@@ -5,7 +5,6 @@ import static org.springframework.test.web.client.match.MockRestRequestMatchers.
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withStatus;
 
 import java.net.URI;
-import java.net.URISyntaxException;
 
 import org.junit.Assert;
 import org.junit.Before;

@@ -1,21 +1,21 @@
 package com.example.dimed.dto;
 
-import java.util.List;
-
 import javax.validation.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 
 /**
- * DTO para dados de  Itinerario.
+ * DTO para Linha.
  *
  * @author rodrigo
  * @version 1.0.0
  * @since 1.0.0
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ItinerarioDto extends DimedDto {
+@JsonIgnoreProperties(value = { "idItinerario" })
+public class LinhaDto extends DimedDto {
 	
 	/**
 	 * 
@@ -24,17 +24,11 @@ public class ItinerarioDto extends DimedDto {
 	
 	@NotEmpty
 	private Long id;
-	
+	@NotEmpty
+	private String codigo;
+	@NotEmpty
 	private String nome;
-	
-	private List<LatLongDto> coordenadas;
 
-	
-	@Override
-	public String toString() {
-		return "ItinerarioDto [id=" + id + ", nome=" + nome + ", itinerario=" + coordenadas.toString() + "]";
-	}
-	
 	public Long getId() {
 		return id;
 	}
@@ -43,6 +37,13 @@ public class ItinerarioDto extends DimedDto {
 		this.id = id;
 	}
 
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
 
 	public String getNome() {
 		return nome;
@@ -52,13 +53,5 @@ public class ItinerarioDto extends DimedDto {
 		this.nome = nome;
 	}
 
-	public List<LatLongDto> getCoordenadas() {
-		return coordenadas;
-	}
-
-	public void setCoordenadas(List<LatLongDto> coordenadas) {
-		this.coordenadas = coordenadas;
-	}
 	
-
 }

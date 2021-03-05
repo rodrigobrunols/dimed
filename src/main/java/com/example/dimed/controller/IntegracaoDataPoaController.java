@@ -10,20 +10,30 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.dimed.service.rest.DataPoaRestService;
 
 /**
- * Controller para operações de Onibus
- *  
+ * Integração com api do http://datapoa.com.br/group/about/mobilidade​ , neste
+ * site realizar a integração com as operações de linhas de ônibus e itinerário.
+ * 
+ * 
+ * Operações (Integração) 
+ * 
+ * - Listar as linhas de ônibus -
+ * http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%&t=o 
+ * 
+ * - Listar itinerário de uma determinada unidade de transporte -
+ * http://www.poatransporte.com.br/php/facades/process.php?a=il&p=5566
+ * 
  * @author rodrigo
  *
  */
 @RestController
-@RequestMapping("/v1/onibus")
-public class OnibusController implements DimedApiController {
+@RequestMapping("/v1/datapoa")
+public class IntegracaoDataPoaController implements DimedApiController {
 
 	@Autowired
 	private DataPoaRestService service;
 
 	/**
-	 * Listar as linhas de ônibus 
+	 * Listar as linhas de ônibus
 	 * 
 	 * @param nomeLinha o Nome da Linha
 	 * @param tipoLinha o Tipo da linha
@@ -31,13 +41,12 @@ public class OnibusController implements DimedApiController {
 	 */
 	@GetMapping("/linhas")
 	public ResponseEntity<String> get(
-			  @RequestParam( name = "nomeLinha", required = true, defaultValue = "%") String nomeLinha
-			, @RequestParam( name = "tipoLinha", required = true, defaultValue = "o") String tipoLinha) {
-		
+			@RequestParam(name = "nomeLinha", required = true, defaultValue = "%") String nomeLinha,
+			@RequestParam(name = "tipoLinha", required = true, defaultValue = "o") String tipoLinha) {
+
 		return service.getLinhas(nomeLinha, tipoLinha);
 	}
-	
-	
+
 	/**
 	 * Listar itinerário de uma determinada unidade de transporte
 	 * 
@@ -46,10 +55,9 @@ public class OnibusController implements DimedApiController {
 	 */
 	@GetMapping("/itinerarios")
 	public ResponseEntity<String> get(
-			 @RequestParam(
-					name = "idLinha", required = true, defaultValue = "5526") Integer idLinha) {
-		
-		return service.getItinerarios( idLinha);
+			@RequestParam(name = "idLinha", required = true, defaultValue = "5526") Integer idLinha) {
+
+		return service.getItinerarios(idLinha);
 	}
 
 }

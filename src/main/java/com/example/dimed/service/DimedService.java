@@ -8,4 +8,7 @@ package com.example.dimed.service;
  * @since 1.0.0
  */
 public interface DimedService {
+	
+	
+  
 }
