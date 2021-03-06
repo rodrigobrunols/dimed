@@ -1,6 +1,7 @@
 package com.example.dimed.controller;
 
 import static org.hamcrest.Matchers.is;
+
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withStatus;
@@ -13,6 +14,7 @@ import java.net.URI;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -21,9 +23,10 @@ import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.web.client.RestTemplate;
 
-import com.example.dimed.DimedApplicationTests;
+import com.example.dimed.DimedApplicationTest;
 
-public class OnibusControllerTest extends DimedApplicationTests {
+@SpringBootTest
+public class IntegracaoDataPoaControllerTest extends DimedApplicationTest {
 
   @Autowired
   private RestTemplate restTemplate;
@@ -39,7 +42,7 @@ public class OnibusControllerTest extends DimedApplicationTests {
   public void getLinhasTest() throws Exception {
 
     mockServer.expect(ExpectedCount.once(),
-        requestTo(new URI("http://localhost:8080/v1/onibus/linhas")))
+        requestTo(new URI("http://localhost:8080/v1/datapoa/linhas")))
         .andExpect(method(HttpMethod.GET))
         .andRespond(withStatus(HttpStatus.OK)
             .body("[{     " +" {\n" + 
@@ -59,7 +62,7 @@ public class OnibusControllerTest extends DimedApplicationTests {
             		"  }]")
             .contentType(MediaType.APPLICATION_JSON));
 
-    getMockMvc().perform(get("/v1/onibus/linhas")
+    getMockMvc().perform(get("/v1/datapoa/linhas")
         .contentType(MediaType.APPLICATION_JSON))
         .andExpect(status().isOk()) 
         .andExpect(MockMvcResultMatchers.content().json(
@@ -74,7 +77,7 @@ public class OnibusControllerTest extends DimedApplicationTests {
   public void getItinerariosTest() throws Exception {
 
     mockServer.expect(ExpectedCount.once(),
-        requestTo(new URI("http://localhost:8080/v1/onibus/itinerarios")))
+        requestTo(new URI("http://localhost:8080/v1/datapoa/itinerarios")))
         .andExpect(method(HttpMethod.GET))
         .andRespond(withStatus(HttpStatus.OK)
             .body("[{     " +" {\n" + 
@@ -92,7 +95,7 @@ public class OnibusControllerTest extends DimedApplicationTests {
             		"  }]")
             .contentType(MediaType.APPLICATION_JSON));
 
-    getMockMvc().perform(get("/v1/onibus/linhas")
+    getMockMvc().perform(get("/v1/datapoa/itinerarios")
         .contentType(MediaType.APPLICATION_JSON))
         .andExpect(status().isOk()) 
         .andExpect(jsonPath("$.idlinha", is("5526")))

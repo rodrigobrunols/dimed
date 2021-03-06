@@ -18,10 +18,10 @@ import org.springframework.test.web.client.ExpectedCount;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.web.client.RestTemplate;
 
-import com.example.dimed.DimedApplicationTests;
+import com.example.dimed.DimedApplicationTest;
 
 
-public class DataPoaRestServiceTest extends DimedApplicationTests {
+public class DataPoaRestServiceTest extends DimedApplicationTest {
 
   @Autowired
   private DataPoaRestService dataPoaRestService;

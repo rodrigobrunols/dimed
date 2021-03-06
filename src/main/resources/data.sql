@@ -1,0 +1,24 @@
+--DROP TABLE IF EXISTS linha;
+--
+--CREATE TABLE linha (
+--  id INT PRIMARY KEY,
+--  codigo VARCHAR(250) NOT NULL,
+--  nome VARCHAR(250) NOT NULL
+--);
+
+INSERT INTO linha (id, codigo,nome) VALUES
+  ('5517', '250-1', '1 DE MAIO'),
+   ('5518', '250-2', '1 DE MAIO'),
+    ('5475', 'T11-1', '3ª PERIMETRAL');
+    
+
+INSERT INTO itinerario (id, nome) VALUES
+  ('1', 'LCA1-1');
+
+INSERT INTO lat_long (id,lat,lng,itinerario_id) VALUES
+  (1,-29.99973471357100000, -51.20036620128900000,'1'),
+  (2, -29.99984671357100000, -51.19982720128900000,'1'),
+  (3, -29.99882271357100000, -51.19817120128900000,'1'),
+  (4, -29.99805071357100000, -51.19787420128900000,'1')
+  ;
+

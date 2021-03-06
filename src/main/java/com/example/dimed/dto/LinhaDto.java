@@ -1,6 +1,7 @@
 package com.example.dimed.dto;
 
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -22,11 +23,13 @@ public class LinhaDto extends DimedDto {
 	 */
 	private static final long serialVersionUID = -8702600946585126985L;
 	
-	@NotEmpty
+	@NotBlank
 	private Long id;
-	@NotEmpty
+	@NotBlank
+    @Size(min = 0, max = 20)
 	private String codigo;
-	@NotEmpty
+	@NotBlank
+    @Size(min = 0, max = 100)
 	private String nome;
 
 	public Long getId() {

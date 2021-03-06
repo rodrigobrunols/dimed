@@ -1,5 +1,7 @@
 package com.example.dimed.dto;
 
+import javax.validation.constraints.NotBlank;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
@@ -17,7 +19,9 @@ public class LatLongDto extends DimedDto {
 	 */
 	private static final long serialVersionUID = -8702600946585126985L;
 
+	@NotBlank
 	private Double lat;
+	@NotBlank
 	private Double lng;
 
 	public Double getLat() {
