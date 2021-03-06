@@ -26,6 +26,11 @@ A aplicação estará disponível no endereço:  localhost:8080
  Banco de Dados rápido e em memória.
  Assim como outros bancos de dados, há suporte intrínseco completo para ele no ecossistema Spring Boot.
 
+### GitHub Actions e Sonar Cloud
+
+Funções de CI e CD e Quality Gates
+
+
 ### Dependencias
 
  ::Mapeamento Modelo Entidade ::
