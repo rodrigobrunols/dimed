@@ -31,8 +31,6 @@ A aplicação estará disponível no endereço:  localhost:8080
 Funções de CI e CD e Quality Gates
 
 
-
-
 ### Dependencias
 
  ::Mapeamento Modelo Entidade ::
