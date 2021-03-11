@@ -1,4 +1,4 @@
-package com.example.dimed.controller;
+package com.example.dimed.controller.integracao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.dimed.controller.FrameworkApiController;
 import com.example.dimed.service.rest.DataPoaRestService;
 
 /**
@@ -27,7 +28,7 @@ import com.example.dimed.service.rest.DataPoaRestService;
  */
 @RestController
 @RequestMapping("/v1/datapoa")
-public class IntegracaoDataPoaController implements DimedApiController {
+public class IntegracaoDataPoaController implements FrameworkApiController {
 
 	@Autowired
 	private DataPoaRestService service;

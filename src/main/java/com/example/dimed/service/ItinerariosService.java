@@ -16,6 +16,7 @@ import com.example.dimed.dto.LatLongDto;
 import com.example.dimed.exception.NotFoundException;
 import com.example.dimed.model.Itinerario;
 import com.example.dimed.model.LatLong;
+import com.example.dimed.model.Linha;
 import com.example.dimed.repository.ItinerariosRepository;
 
 /**
@@ -111,7 +112,10 @@ public class ItinerariosService implements DimedService {
 			repository.save(itinerario);
 		});
 
-		repository.save(toItinerario.apply(dto));
+		Itinerario atualizado = repository.save(toItinerario.apply(dto));
+		
+		LOGGER.info("Atualizado: " + atualizado.toString());
+	
 
 		return dto;
 	}

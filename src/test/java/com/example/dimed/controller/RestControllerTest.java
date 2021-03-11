@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.example.dimed.controller.LinhasController;
+import com.example.dimed.controller.integracao.IntegracaoDataPoaController;
 
 @SpringBootTest
 public class RestControllerTest {

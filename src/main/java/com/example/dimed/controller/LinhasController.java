@@ -46,7 +46,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
  */
 @RequestMapping("/v1/linhas")
 @RestController
-public class LinhasController implements DimedApiController {
+public class LinhasController implements FrameworkApiController {
 
 	@Autowired
 	private LinhasService service;
@@ -71,9 +71,9 @@ public class LinhasController implements DimedApiController {
 			  @ApiResponse(responseCode = "200", description = "Linha encontrada", 
 			    content = { @Content(mediaType = "application/json", 
 			      schema = @Schema(implementation = LinhaDto.class)) }),
-			  @ApiResponse(responseCode = "400", description = "Id não econtrado", 
+			  @ApiResponse(responseCode = "400", description = "Erro na requisição", 
 			    content = @Content), 
-			  @ApiResponse(responseCode = "404", description = "Not found", 
+			  @ApiResponse(responseCode = "404", description = "Id não encontrado", 
 			    content = @Content) })
 	@ResponseBody
 	public LinhaDto retrieve(@PathVariable(value = "id") Long id) {

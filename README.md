@@ -1,37 +1,51 @@
 # README
 
 ## OBJETIVO
+
  Avaliação técnica para desenvolvedor backend
 
 ## PRE REQUISITOS
 
-Docker
-Maven
-Linux
+ Docker
+ Maven
 
-## Executando a aplicação
+## INICIAR APPLICACAO
 
-Execute o script build.sh para criar a imagem e executar a aplicação 
+ Execute o script build.sh para criar a imagem e executar a aplicação 
 
-A aplicação estará disponível no endereço:  localhost:8080
+##  BASEPATH:  
 
-## Decisões
-		::Junto com o teste, justifique o porquê utilizou o determinado framework,
-		determinada base de dados e exemplos de req::
+### localhost:8080/v1
 
-### Spring Boot 
+##  ENDPOINTS:
+
+###	localhost:8080/v1/linhas		
+###	localhost:8080/v1/itinerarios
+###	localhost:8080/v1/datapoa
+
+## OpenAPI Spec 
+
+###	http://localhost:8080/swagger-ui.html
+
+
+## TECNOLOGIAS
+		
+
+### SPRING BOOT 
+
 	Facilita a criação de aplicativos autônomos, Dockerizaveis baseados em Spring que podem executar rapidamente.
 
 ### H2 DB
+
  Banco de Dados rápido e em memória.
  Assim como outros bancos de dados, há suporte intrínseco completo para ele no ecossistema Spring Boot.
 
-### GitHub Actions e Sonar Cloud
+### GITHUB ACTIONS E SONAR CLOUD
 
-Funções de CI e CD e Quality Gates
+ Funções de CI e Análise de Código
 
 
-### Dependencias
+## DEPENDENCIAS
 
  ::Mapeamento Modelo Entidade ::
   

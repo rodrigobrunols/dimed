@@ -104,7 +104,9 @@ public class LinhasService implements DimedService {
 			repository.save(linha);
 		});
 
-		repository.save(mapper.map(dto,Linha.class));
+		Linha atualizado = repository.save(mapper.map(dto,Linha.class));
+		
+		LOGGER.info("Atualizado: " + atualizado.toString());
 		
 		return dto;
 	}

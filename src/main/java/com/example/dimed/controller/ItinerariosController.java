@@ -43,7 +43,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
  */
 @RequestMapping("/v1/itinerarios")
 @RestController
-public class ItinerariosController implements DimedApiController {
+public class ItinerariosController implements FrameworkApiController {
 
 	@Autowired
 	private ItinerariosService service;
@@ -68,10 +68,10 @@ public class ItinerariosController implements DimedApiController {
 			  @ApiResponse(responseCode = "200", description = "Itinerario encontrado", 
 			    content = { @Content(mediaType = "application/json", 
 			      schema = @Schema(implementation = ItinerarioDto.class)) }),
-			  @ApiResponse(responseCode = "400", description = "Id não econtrado", 
+			  @ApiResponse(responseCode = "400", description = "Erro na requisição", 
 			    content = @Content), 
-			  @ApiResponse(responseCode = "404", description = "Not found", 
-			    content = @Content) })
+			  @ApiResponse(responseCode = "404", description = "Id não encontrado", 
+				    content = @Content) })
 	public ItinerarioDto retrieve(@PathVariable(value = "id") Long id) {
 		return service.retrieve(id);
 	}

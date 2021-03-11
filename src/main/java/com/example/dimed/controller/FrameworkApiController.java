@@ -7,5 +7,5 @@ package com.example.dimed.controller;
  * @version 1.0.0
  * @since 1.0.0
  */
-public interface DimedApiController {
+public interface FrameworkApiController {
 }
