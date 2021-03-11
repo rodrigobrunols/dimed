@@ -14,7 +14,7 @@ import javax.persistence.ManyToOne;
  *
  */
 @Entity
-public class LatLong extends DimedEntity {
+public class LatLong extends FrameworkEntity {
 	/**
 	* 
 	*/

@@ -9,6 +9,6 @@ import java.io.Serializable;
  * @version 1.0.0
  * @since 1.0.0
  */
-public interface DimedRepository extends Serializable {
+public interface FrameworkRepository extends Serializable {
 
 }

@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.example.dimed.model.Itinerario;
 
-public interface ItinerariosRepository extends DimedCrudRepository<Itinerario, Long> {
+public interface ItinerariosRepository extends FrameworkCrudRepository<Itinerario, Long> {
 
 
   @Query(value = "SELECT i FROM Itinerario i")

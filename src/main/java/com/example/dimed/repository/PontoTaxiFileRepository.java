@@ -39,7 +39,7 @@ import com.example.dimed.model.PontoTaxi;
  * @author rodrigo
  *
  */
-public class PontoTaxiFileRepository implements DimedRepository {
+public class PontoTaxiFileRepository implements FrameworkRepository {
 
 	private static final String FIELDDELIMITER = "#";
 

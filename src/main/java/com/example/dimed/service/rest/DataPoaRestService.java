@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.example.dimed.service.DimedService;
+import com.example.dimed.service.FrameworkService;
 
 /**
  * REST Client para api datapoa
@@ -18,7 +18,7 @@ import com.example.dimed.service.DimedService;
  *
  */
 @Service
-public class DataPoaRestService implements DimedService {
+public class DataPoaRestService implements FrameworkService {
 
 	private static final String RECUPERAR_ITINERARIOS = "il";
 

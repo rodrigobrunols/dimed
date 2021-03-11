@@ -10,7 +10,7 @@ import java.util.List;
  * @author rodrigo
  *
  */
-public class PontoTaxi extends DimedEntity {
+public class PontoTaxi extends FrameworkEntity {
 
 	private static final int DATETIME_POSITION = 3;
 

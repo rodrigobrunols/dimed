@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @version 1.0.0
  * @since 1.0.0
  */
-public abstract class DimedEntity implements Serializable {
+public abstract class FrameworkEntity implements Serializable {
 
   /**
    * Serial version default

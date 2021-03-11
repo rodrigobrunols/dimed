@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 
 import com.example.dimed.model.Linha;
 
-public interface LinhasRepository extends DimedCrudRepository<Linha, Long> {
+public interface LinhasRepository extends FrameworkCrudRepository<Linha, Long> {
 
 
   @Query("select l from Linha l where l.codigo = :codigo ")

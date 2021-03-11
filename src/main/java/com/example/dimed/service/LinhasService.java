@@ -34,7 +34,7 @@ import com.example.dimed.repository.LinhasRepository;
  *
  */
 @Service
-public class LinhasService implements DimedService {
+public class LinhasService implements FrameworkService {
 
 	private final static Logger LOGGER = Logger.getLogger(LinhasService.class.getName());
 

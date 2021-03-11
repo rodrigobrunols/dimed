@@ -15,7 +15,7 @@ import javax.persistence.OneToMany;
  *
  */
 @Entity
-public class Itinerario extends DimedEntity {
+public class Itinerario extends FrameworkEntity {
 
 	/**
 	* 

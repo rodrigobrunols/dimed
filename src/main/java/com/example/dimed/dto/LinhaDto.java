@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(value = { "idItinerario" })
-public class LinhaDto extends DimedDto {
+public class LinhaDto extends FrameworkDto {
 	
 	/**
 	 * 

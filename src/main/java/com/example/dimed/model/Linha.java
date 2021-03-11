@@ -10,7 +10,7 @@ import javax.persistence.Id;
  *
  */
 @Entity
-public class Linha extends DimedEntity{
+public class Linha extends FrameworkEntity{
 
 	/**
 	 * 

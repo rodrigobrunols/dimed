@@ -7,7 +7,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @AutoConfigureMockMvc
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public abstract class DimedApplicationTest {
+public abstract class ApplicationTest {
 
 	@Autowired
 	private MockMvc mockMvc;

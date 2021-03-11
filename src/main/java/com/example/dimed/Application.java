@@ -58,7 +58,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @SpringBootApplication
 @ComponentScan
-public class DimedApplication {
+public class Application {
 
 	@Bean
 	public RestTemplate restTemplate() {
@@ -76,7 +76,7 @@ public class DimedApplication {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		SpringApplication.run(DimedApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

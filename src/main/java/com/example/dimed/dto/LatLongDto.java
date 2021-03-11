@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  * @since 1.0.0
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class LatLongDto extends DimedDto {
+public class LatLongDto extends FrameworkDto {
 
 	/**
 	 * 

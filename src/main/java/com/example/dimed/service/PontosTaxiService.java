@@ -32,7 +32,7 @@ import com.example.dimed.repository.PontoTaxiFileRepository;
  * 
  */
 @Service
-public class PontosTaxiService implements DimedService {
+public class PontosTaxiService implements FrameworkService {
 
 	private final static Logger LOGGER = Logger.getLogger(PontosTaxiService.class.getName());
 

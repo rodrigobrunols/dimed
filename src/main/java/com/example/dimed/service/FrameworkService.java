@@ -7,7 +7,7 @@ package com.example.dimed.service;
  * @version 1.0.0
  * @since 1.0.0
  */
-public interface DimedService {
+public interface FrameworkService {
 	
 	
   

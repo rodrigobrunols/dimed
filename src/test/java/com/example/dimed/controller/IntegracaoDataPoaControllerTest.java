@@ -23,10 +23,10 @@ import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.web.client.RestTemplate;
 
-import com.example.dimed.DimedApplicationTest;
+import com.example.dimed.ApplicationTest;
 
 @SpringBootTest
-public class IntegracaoDataPoaControllerTest extends DimedApplicationTest {
+public class IntegracaoDataPoaControllerTest extends ApplicationTest {
 
   @Autowired
   private RestTemplate restTemplate;

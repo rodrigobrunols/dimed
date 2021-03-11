@@ -17,7 +17,7 @@ import java.util.List;
  * @since 1.0.0
  */
 @NoRepositoryBean
-public interface DimedCrudRepository<T, ID extends Serializable> extends CrudRepository<T, ID>, DimedRepository {
+public interface FrameworkCrudRepository<T, ID extends Serializable> extends CrudRepository<T, ID>, FrameworkRepository {
 
   default T findOne(ID id) {
     return findById(id).orElse(null);

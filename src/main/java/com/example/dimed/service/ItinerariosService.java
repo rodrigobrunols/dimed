@@ -38,7 +38,7 @@ import com.example.dimed.repository.ItinerariosRepository;
  *
  */
 @Service
-public class ItinerariosService implements DimedService {
+public class ItinerariosService implements FrameworkService {
 
 	private final static Logger LOGGER = Logger.getLogger(ItinerariosService.class.getName());
 

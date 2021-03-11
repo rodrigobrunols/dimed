@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  * @since 1.0.0
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ItinerarioDto extends DimedDto {
+public class ItinerarioDto extends FrameworkDto {
 	
 	/**
 	 * 
